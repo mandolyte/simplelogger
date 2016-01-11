@@ -4,12 +4,12 @@
 package simplelogger
 
 import (
-	"io"
 	"fmt"
+	"io"
 )
 
 // The SimpleLogger struct has booleans for both
-// information and debug messages, as well as an 
+// information and debug messages, as well as an
 // io.Writer where messages are logged
 type SimpleLogger struct {
 	// set to true for information messages
@@ -35,4 +35,3 @@ func (l *SimpleLogger) Debug(format string, v ...interface{}) {
 		l.Writer.Write([]byte(fmt.Sprintf(format, v...)))
 	}
 }
-

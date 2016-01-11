@@ -10,7 +10,7 @@ func TestInfoMessages(t *testing.T) {
 	sl := &SimpleLogger{
 		INFO:   true,
 		DEBUG:  false,
-		Writer:   buf,
+		Writer: buf,
 	}
 
 	sl.Info("foo")
@@ -28,7 +28,7 @@ func TestFormattedInfoMessages(t *testing.T) {
 	sl := &SimpleLogger{
 		INFO:   true,
 		DEBUG:  false,
-		Writer:   buf,
+		Writer: buf,
 	}
 
 	sl.Info("[info] %s\n", "foo")
@@ -45,7 +45,7 @@ func TestDebugMessages(t *testing.T) {
 	sl := &SimpleLogger{
 		INFO:   false,
 		DEBUG:  true,
-		Writer:   buf,
+		Writer: buf,
 	}
 
 	sl.Info("foo")
@@ -63,7 +63,7 @@ func TestFormattedDebugMessages(t *testing.T) {
 	sl := &SimpleLogger{
 		INFO:   false,
 		DEBUG:  true,
-		Writer:   buf,
+		Writer: buf,
 	}
 
 	sl.Info("[info] %s\n", "foo")
@@ -80,7 +80,7 @@ func TestBothMessages(t *testing.T) {
 	sl := &SimpleLogger{
 		INFO:   true,
 		DEBUG:  true,
-		Writer:   buf,
+		Writer: buf,
 	}
 
 	sl.Info("foo")
@@ -98,7 +98,7 @@ func TestFormattedBothMessages(t *testing.T) {
 	sl := &SimpleLogger{
 		INFO:   true,
 		DEBUG:  true,
-		Writer:   buf,
+		Writer: buf,
 	}
 
 	sl.Info("[info] %s\n", "foo")
@@ -115,7 +115,7 @@ func TestNoMessages(t *testing.T) {
 	sl := &SimpleLogger{
 		INFO:   false,
 		DEBUG:  false,
-		Writer:   buf,
+		Writer: buf,
 	}
 
 	sl.Info("foo")
@@ -133,7 +133,7 @@ func TestFormattedNoMessages(t *testing.T) {
 	sl := &SimpleLogger{
 		INFO:   false,
 		DEBUG:  false,
-		Writer:   buf,
+		Writer: buf,
 	}
 
 	sl.Info("[info] %s\n", "foo")
@@ -144,4 +144,3 @@ func TestFormattedNoMessages(t *testing.T) {
 		t.Fatalf("[fail] expected: %s, got %s", expected, result)
 	}
 }
-
